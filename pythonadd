@@ -1,0 +1,12 @@
+#counter for list, counting the last letter of names in a list
+
+def freqList(filename):
+    'returns frequency of items in nameList'
+    nameList = readfile(filename)
+    counters = []
+    for name in nameList:
+        if name[-2] in counters: # increment item counter
+            counters[name[-2]] += 1
+        else: # create item counter
+            counters[name[-2]] = 1
+    return counters
