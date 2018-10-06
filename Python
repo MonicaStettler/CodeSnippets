@@ -1,0 +1,11 @@
+#uses dictionary as a counter, works but items are not sorted in order, they are counted as they appear in the original list
+def freqDict(filename):
+    'returns frequency of items in nameList'
+    nameList = readfile(filename)
+    counters = {}
+    for name in nameList:
+        if name[-2] in counters: # increment item counter
+            counters[name[-2]] += 1
+        else: # create item counter
+            counters[name[-2]] = 1
+    return counters
